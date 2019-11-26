@@ -98,14 +98,15 @@ node* createThreaded(node* root) {
 void main() {
 	node* root = NULL;
 	node* temp = NULL;
-	root = insert(root, 50);
-	insert(root, 30);
+	root = insert(root, 30);
 	insert(root, 20);
-	insert(root, 40);
+	insert(root, 50);
 	insert(root, 70);
 	insert(root, 60);
+	insert(root, 40);
 	insert(root, 80);
-	inOrder(root);
+	createThreaded(root);
+	inorder(root);
 	printf("\n");
 	temp = search(root, 70);
 	if (temp != NULL) {
