@@ -31,7 +31,7 @@ node* insert(node* root, int key) {
 }
 
 node* search(node* root, int key) {
-	if (root == NULL) {
+	if (root == NULL || root->data == key) {
 		return root;
 	}
 	if (key < root->data) {
@@ -68,7 +68,8 @@ void postorder(node* root) {
 
 
 void main() {
-	struct node* root = NULL;
+	node* root = NULL;
+	node* temp = NULL;
 	root = insert(root, 50);
 	insert(root, 30);
 	insert(root, 20);
@@ -81,4 +82,12 @@ void main() {
 	preorder(root);
 	printf("\n");
 	postorder(root);
+	printf("\n");
+	temp = search(root, 70);
+	if (temp != NULL) {
+		printf("Found");
+	}
+	else {
+		printf("Not found");
+	}
 }
