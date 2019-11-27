@@ -1,4 +1,4 @@
-#include <stdio.h> 
+# include <stdio.h> 
 
 // A recursive binary search function. It returns 
 // location of x in given array arr[l..r] is present, 
