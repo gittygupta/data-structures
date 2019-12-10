@@ -65,14 +65,6 @@ void inorder(node* root) {
 	}
 }
 
-void inOrder(node* root) {
-	if (root != NULL) {
-		inOrder(root->left);
-		printf("%d ",root->data);
-		inOrder(root->right);
-	}
-}
-
 node* createThreaded(node* root) {
 	if (root == NULL) {
 		return NULL;
