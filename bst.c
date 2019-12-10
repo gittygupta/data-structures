@@ -60,8 +60,8 @@ void preorder(node* root) {
 
 void postorder(node* root) {
 	if (root != NULL) {
-		postorder(root->right);
 		postorder(root->left);
+		postorder(root->right);
 		printf("%d ", root->data);
 	}
 }
